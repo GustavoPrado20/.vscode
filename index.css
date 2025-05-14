@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
+
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    height: 100%;
+}
+.container{
+    display: grid;
+    grid-template-columns: 300px 1fr 330px;
+    min-height: 100vh;
+    min-height: -webkit-fill-available;
+    overflow: hidden;
+}
+#menu{
+    background: rgb(223, 225, 222);
+    background-image: url("Saved Pictures/fruta/mesa-de-madeira-escura-marrom-de-madeira-velha_88281-1545.avif")
+}
+.title{
+    padding: -10px;
+}
+#menu img{
+    width: 150px;
+    height: 150px;
+    border-radius: 0%;
+    margin-top: -13px;
+    object-fit: contain;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background: rgb(3, 3, 3);
+}
+
+.border{
+    width: 80px;
+    height: 4px;
+    margin: 30px 0;
+    margin-bottom: 30px;
+    border-radius: 2px;
+    background: rgba(240, 244, 240, 0.859);
+}
+
+.menu-item a {
+    display: block; /* Melhor para links em menus */
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    border: 1px solid rgb(0, 0, 0); /* borda parecida com a da busca */
+    border-radius: 20px; /* cantos arredondados */
+    margin: 10px 0; /* espaçamento entre os itens */
+    background-color: rgba(251, 254, 253, 0.807); /* fundo branco */
+    transition: background 0.3s;
+}
+
+.menu-item a:hover {
+    background: rgb(23, 171, 48);
+}
+
+
+#food-items{
+    background: rgb(0, 0, 0);
+    overflow: auto;
+    height: calc(100vh - 86px);
+    overflow-y: scroll;
+    background-image: url(''); /* Novo plano de fundo */
+    background-size: cover; /* Ajusta para cobrir toda a área */
+    background-position: center; /* Centraliza a imagem */
+    background-repeat: no-repeat; /* Evita repetição da imagem */
+}
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10px 10px 20px; /* Reduzindo ainda mais o padding horizontal */
+    position: sticky;
+    top: 0;
+    background-color: #000000;
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+
+#header .address{
+    font-size: 20px;
+    
+}
+#map{
+    font-size: 25px;
+    color: red;
+}
+.search-background {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 150px; /* Aumentando a altura do plano de fundo */
+    padding: 200px; /* Ajustando o espaçamento interno */
+    background-size: cover; /* Garantindo que o fundo cubra toda a área */
+    background-color: rgba(255, 255, 255, 0.8); /* Adicionando um fundo mais claro */
+    z-index: 0;
+    border-bottom: 2px solid rgba(57, 111, 73, 0.3);
+}
+.your-search {
+    margin-left: 0;
+    margin-right: auto;
+    float: none;
+    left: 0;
+    position: relative;
+    right: auto;
+    padding-left: 0;
+}
+.add-box {
+    width: 500%;
+    max-width: 250px;
+    padding: 20px;
+    border-radius: 20px;
+    background: rgba(4, 11, 1, 0.8);
+    background-image: url('');
+    background-size: cover;
+    background-position: center;
+    margin-left: 40px;
+}
+
+#search-input { /* Estilo específico para o input */
+    width: 30%; /* Aumentando a largura */
+    padding: 10px; /* Aumentando o espaçamento interno */
+    font-size: 10px; /* Ajustando o tamanho da fonte */
+    border: 10px solid rgb(50, 23, 129);;
+    border-radius: 150px;
+    box-sizing: border-box; /* Impede que o padding aumente a largura */
+    color: rgb(113, 21, 187);
+    font-family: 'Open Sans', sans-serif; /* Para manter a consistência da fonte */
+    outline: none; /* Remove a borda de foco */
+}
+#header select{
+    width: 150px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    background: none;
+    color: rgb(28, 205, 54);
+    padding: 0 5px;
+}
+
+.food-items{
+    display: none;
+    background-image: url("fruta/zzzxs.jpeg");
+}
+.cart-toggle{
+    padding: none;
+}
+.util {
+    display: inline-flex;
+    align-items: center;
+    gap: 0;
+}
+
+.user {
+    order: 1;
+}
+
+.util > * {
+    order: 2;
+}
+
+.util i, .user i {
+    font-size: 18px;
+    border: 2px solid rgb(220, 67, 20);
+    padding: 8px 16px;
+    color: rgb(220, 63, 20);
+    border-radius: 200px;
+    cursor: pointer;
+    margin: 0;
+    background: #d6dbd6; 
+    color: white; /* Cor do texto branca */
+}
+
+.util i:hover, .user i:hover {
+    background: #d4d2d2; /* Cor de fundo ao passar o mouse */
+    color: #f0f0f0; /* Cor do texto ao passar o mouse */
+}
+
+.util i:active, .user i:active {
+    color: white;
+    background: crimson;
+}
+
+.filled-heart {
+    background-color: red;
+    color: white;
+}
+
+#Frutas,#Verduras,#Legumes,#Grãos,#Temperos,#Artesanatos,#Derivados{
+    margin-top: 40px;   
+}
+#Frutas #item-card,#Frutas #item-card{
+    background: rgb(139, 241, 147);
+}
+#Verduras #item-card,#Verduras #item-card{
+    background: rgb(130, 190, 118);
+}
+#Legumes #item-card,#Legumes #item-card{
+    background: rgb(118, 198, 133);
+}
+#Grãos #item-card,#Grãos #item-card{
+    background: rgb(226, 226, 219);
+}
+#Temperos #item-card,#Temperos #item-card{
+    background: rgb(223, 225, 210);
+}
+#Artesanatos #item-card,#Artesanatos #item-card{
+    background: rgb(228, 229, 218);
+}
+#Derivados #item-card,#Derivados #item-card{
+    background: rgb(243, 242, 221);
+}
+#category-name,.item-menu{
+    position: relative; /* Necessário para posicionar o pseudo-elemento */
+    background-color: rgb(214, 223, 226); /* Alterei a cor de fundo para azul claro */
+    color: rgb(7, 11, 6); /* Sua cor de texto */
+    border-radius: 10px; /* Bordas arredondadas para o balão */
+    padding: 15px;
+    margin: 10px; /* Sua margem */
+    font-size: 50px; /* Seu tamanho de fonte */
+    text-align: center; /* Seu alinhamento de texto */
+    font-family: 'Aclo'
+}
+#item-card{
+    width: 180px;
+    height: 255px;
+    padding: 10px;
+    margin: 10px;
+    display: inline-block;
+    border-radius: 5px;
+    background: rgb(228, 228, 228);
+    cursor: pointer;
+    transition: 0.5s all step-end;
+}
+#item-card:hover img{
+    transform: scale(1.2);
+}
+#card-top{
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+#rating{
+    padding: 7px;
+    color: goldenrod;
+    background: black;
+    font-size: 14px;
+    border-radius: 15px;
+}
+.fa-heart-o{
+    padding: 6px;
+    border-radius: 50%;
+    background: white;
+    cursor: pointer;
+}
+.toggle-heart{
+    background: rgb(185, 0, 0);
+    color: rgb(255, 255, 255);
+}
+#item-card img{
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    margin: auto;
+    display: block;
+    margin-bottom: 15px;
+    transition: 0.5s all ease-in-out;
+}
+#item-name{
+    margin: 5px 0;
+    font-weight: 600;
+    color: darkslategray;
+    font-size: 18px;
+}
+#item-price{
+    margin: 0;
+    color: rgb(2, 27, 27);
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.food-items{
+    display: none;
+}
+.cart-toggle{
+    display: none;
+}
+#cart-page{
+    background: rgb(201, 198, 198);
+    margin: 40px 10px;
+    margin-right: 50px;
+    padding: 20px 30px;
+    padding-bottom: 30px;
+    position: relative;
+}
+#cart-title{
+    font-size: 35px;
+    margin: 0;
+    color: indianred;
+}
+#cart-page table{
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+#cart-page table thead td{
+    font-size: 25px;
+    padding-bottom: 10px;
+}
+
+.cart-btn{
+    outline: none;
+    border: none;
+    background: crimson;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    font-size: 18px;
+    text-transform: uppercase;
+    bottom: 30px;
+    margin: 15px 0;
+    cursor: pointer;
+}
+#cart-page table tbody td{
+    padding: 10px 0;
+    font-size: 20px;
+}
+#cart-page table tbody button{
+    outline: none;
+    border: none;
+    font-size: 16px;
+    background: none;
+    background: lightcoral;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 5px;
+}
+#cart-page table tbody img{
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+}
+
+
+#cart {
+    padding-right: 30px;
+    background-image: url('Saved Pictures/fruta/mesa-de-madeira-escura-marrom-de-madeira-velha_88281-1545.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 300px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    overflow-y: auto;
+    padding-bottom: 50px;
+}
+
+.item-menu{
+    display: block; /* Melhor para links em menus */
+    text-decoration: none;
+    font-size: 20px;
+    padding: 8px 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    border: 1px solid rgb(250, 243, 243); /* borda parecida com a da busca */
+    border-radius: 20px; /* cantos arredondados */
+    margin: 10px 0; /* espaçamento entre os itens */
+    background-color: rgba(250, 243, 243); /* fundo branco */
+    transition: background 0.3s;
+}
+
+#category-list {
+    position: relative;
+    z-index: 2;
+    padding: 10px 15px;
+    height: calc(100vh - 100px);
+    overflow-y: auto;
+}
+
+#category-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+#category-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 100;
+}
+
+#category-list::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+#category-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(143, 143, 143, 0.3);
+}
+
+#category-list a {
+    display: block;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(5px);
+    border-radius: 15px;
+    color: #333;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(220, 0, 0, 0.05);
+}
+
+#category-list a:hover {
+    transform: translateX(-10px);
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.list-card{
+    display: flex;
+    align-items: center;
+    margin-top: 15px;
+    border-radius: 300px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+.list-card:hover{
+    background: rgb(40, 228, 11);
+}
+.list-card:hover img{
+    transition: 0.5s all ease-in-out;
+    transform: scale(1.2);
+}
+.list-card img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.list-name{
+    font-size: 100px;
+    margin: 0 100px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color: rgb(61, 43, 94);
+}
+
+
+.taste-header {
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    color: rgb(251, 252, 255);
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.util {
+    display: flex;
+    align-items: center;
+    order: 1;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    order: 2;
+}
+
+.util i, .user i {
+    font-size: 18px;
+    border: 2px solid rgb(30, 220, 20);
+    padding: 8px 16px;
+    color: rgb(42, 243, 216);
+    border-radius: 200px;
+    cursor: pointer;
+    margin: 0;
+    background: #4CAF50; /* Cor de fundo verde */
+    color: white; /* Cor do texto branca */
+}
+
+.util i:hover, .user i:hover {
+    background: #45a049; /* Cor de fundo ao passar o mouse */
+    color: #f0f0f0; /* Cor do texto ao passar o mouse */
+}
+
+#mobile-view{
+    display: none;
+}
+#Frutas{
+    margin-top: 10px;
+}
+#m-total-amount{
+    display: none;
+}
+@media screen and (max-width : 800px) and (-webkit-min-device-pixel-ratio: 2){
+    .container{
+        display: none;
+    }
+    #mobile-view{
+        display: grid;
+        grid-template-rows: 120px 1fr 50px;
+        height: 100%;
+        overflow: hidden;
+        
+        width: 100vw;
+    }
+    .mobile-top{
+        padding: 5px 15px;
+        background: white;
+        z-index: 1;
+    }
+    .item-container{
+        overflow-y: scroll;
+    }
+    .logo-box,.top-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #logo{
+        width: 90px;
+        height: 70px;
+    }
+    .logo-box .your-address{
+        font-size: 18px;
+        width: 150px;
+        color: rgb(193, 92, 112);
+        text-transform: capitalize;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    .top-menu{
+
+        color: indianred;
+    }
+    .top-menu i{
+        font-size: 20px;
+        cursor: pointer;
+        padding: 12px 5px ;
+        border-radius: 50%;
+    }
+    
+    .m-cart-toggle{
+        color: white;
+        background: lightcoral;
+    }
+    .category-header{
+        display: flex;
+        width: 100vw;
+        overflow-x: scroll;
+        position: sticky;
+        top: 0;
+        background: rgb(240, 240, 240);
+        z-index: 1;
+        border-bottom: 1px solid rgb(242, 242, 247);
+        margin: 110;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+    .toggle-category{
+        display: none;
+        position: relative;
+    }
+    .list-card{
+        margin: 0 10px;
+        text-align: center;
+    }
+    .list-card img{
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+    }
+    .list-card:hover{
+        background: none;
+    }
+    .list-card:hover img{
+        transform: none;
+        transition: none;
+    }
+    .list-name{
+        margin: 5px 0;
+        color: coral;
+        width: max-content;
+        font-size: 16px;
+    }
+    #food-items{        
+        padding: 5px 10px;
+    }
+
+    .mobile-footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding:  150px;
+        background: rgb(213, 26, 26);
+        border-top: 1px solid rgb(214, 14, 14);
+    }
+    .mobile-footer{
+        color: indianred;
+        text-transform: uppercase;
+        font-size: 16px;
+        position: static;
+    }
+    #category-name{
+        font-size: 25px;
+        font-family: 'Aclonica', sans-serif;
+    }
+    #item-card{
+        width: 150px;
+        height: 200px;
+    }
+    #item-card img{
+        width: 100px;
+        height: 100px;
+    }
+    #item-name,#item-price{
+        font-size: 16px;
+    }
+    .list-card{
+        flex-direction: column;
+    }
+    #cart-page{
+        margin: 3px 0;
+        padding: 10px 5px;
+        padding-bottom: 30px;
+        border-top: 1px solid rgb(219, 219, 219);
+    }
+    #cart-page table thead td{
+        font-size: 20px;
+    }
+    #cart-page table tbody td{
+        font-size: 18px;
+    }
+    #cart-page table tbody img{
+        width: 60px;
+        height: 60px;
+    }
+    #cart-title{
+        font-size: 25px;
+        display: inline-block;
+        font-family: 'Aclonica', sans-serif;
+    }
+    #m-total-amount{
+        display: inline-block;
+        color: lightcoral;
+        padding: 5px 10px;
+        margin: 0;
+        border:  1px solid lightcoral;
+
+    }
+    .cart-btn{
+        font-size: 14px;
+        background: lightcoral;
+        padding: 8px 15px;
+        margin: auto;
+    }
+    .btn-box{
+        text-align: center;
+    }
+    
+}
+
+@media screen and (max-width : 400px) and (-webkit-min-device-pixel-ratio: 2){
+    #mobile-view{
+        min-height: -webkit-fill-available;
+    }
+    #item-card{
+        height: 200px;
+        width: 140px;
+    }
+    #food-items{
+        padding: 0;
+    }
+}
+
+.search-results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background: rgb(104, 216, 111);
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.search-results-title {
+    grid-column: 1 / -1;
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #08137b;
+    
+}
+
+#search-input {
+    width: 300%; /* Aumentando a largura */
+    padding: 7px; /* Aumentando o espaçamento interno */
+    font-size: 18px; /* Ajustando o tamanho da fonte */
+    margin: -100px 0;
+    border: 15px solid #4CAF50;
+    border-radius: 250px;
+    transition: all 0.3s ease;
+    background: rgb(255, 255, 255);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: #4551a0;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.3);
+}
+
+#search-input::placeholder {
+    color: #181818;
+}
+
+/* Novo container para os botões */
+.header-buttons {
+    display: flex;
+    gap: 0;
+    position: fixed;
+    right: 20px;
+    z-index: 1000;
+}
+

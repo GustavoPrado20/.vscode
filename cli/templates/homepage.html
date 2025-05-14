@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>homopage do site</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-family: 'Open Sans', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: #47c4cd;
+        }
+        main {
+            width: 100%;
+            max-width: 500px;
+            background: #f2f2f3;
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow:rgb( green,);
+            margin: 24px 0;
+        }
+        header, footer {
+            width: 100%;
+            text-align: center;
+            border-color: #7c3aed;
+        }
+        img {
+            display: block;
+            margin: 0 auto 16px auto;
+        }
+        button {
+            display: block;
+            margin: 16px auto 0 auto;
+            padding: 10px 24px;
+            background: #7c3aed;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #5b21b6;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Ameixa Roxa fresca e docinha</h1>
+    </header>
+
+    <main>
+        <section id="informacoes-produto">
+            <h2>Informações do Produto</h2>
+        
+            <p>Esta é uma fruta muita saudável e nutritiva  para o seu dia a dia.</p>
+            <ul>
+                <li>100% Natural e sem Agrotóxicos </li>
+                <li>Direto da roça para tua casa</li>
+            </ul>
+           
+                <label>Quantidade:</label>
+                <input type="number" name="quantidade" min="1" value="1">
+                <p>Preço: R$ 15,99 por KG</p>
+                <button type="submit">Comprar</button>
+            </form> 
+        </section>
+
+        <section id="detalhes-adicionais">
+            <h2>Dicas dos Produtos</h2>
+            <p>Para armazenar alimentos não perecíveis por mais tempo, escolha um local fresco, seco e longe da luz.</p>
+            <p>Cuidados:Lave bem antes comer e aproveite.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Armazém do Sítio</p>
+    </footer>
+</body>
+</html>

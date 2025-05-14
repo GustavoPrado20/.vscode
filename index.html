@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover">
+    <title>Armazém Website</title>
+    <link rel="stylesheet" href="/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href=https://fonts.googleapis.com/css?family=Open+Sans:wght@300&display=swap>
+</head>
+<body>
+
+    <!-- desktop view -->
+    <div class="container" id="container">
+        <div id="menu">
+            <div class="title">
+                <img src="Saved Pictures/fruta/Imagem do WhatsApp de 2025-04-07 à(s) 14.45.31_d58615af.jpg" alt="">
+            </div>
+            <div class="menu-item">
+                <a href="https://samuelburkner.github.io/sobrearmazm/">Sobre</a>
+                <a href="https://samuelburkner.github.io/server/">Serviços</a>
+                <a href="https://samuelburkner.github.io/oferta/">Oferta</a>
+                <a href="https://samuelburkner.github.io/receitas/">Receitas Naturais</a>
+                <a href="https://samuelburkner.github.io/suporte12345/">Suporte</a>
+                <a href="https://samuelburkner.github.io/clientes1234/">Gestão de clientes</a>
+                <a href="https://samuelburkner.github.io/estoque/index.html">Gestão de estoque</a>
+                <a href="https://samuelburkner.github.io/entrega123/">Gerenciamento de entrega</a>
+                <a href="#">Conta</a>
+            </div>
+        </div>
+        <div id="food-container">
+            <div id="header">
+                <div class="add-box">
+                    <form id="search-form">
+                        <input type="text" class="your-search" id="search-input" placeholder=" 🔍 Pesquisa">
+                        <button type="submit" style="display: none;"></button>
+                    </form>
+                </div>
+            </div>
+
+            <div id="food-items" class="d-food-items">
+                <div id="Frutas" class="d-Frutas">
+                    <p id="category-name">Frutas</p>    
+                </div>
+                <div id="Verduras" class="d-Verduras">
+                    <p id="category-name">Verduras</p>    
+                </div>
+                <div id="Legumes" class="d-Legumes">
+                    <p id="category-name">Legumes</p>
+                </div>
+                <div id="Grãos" class="d-Grãos">
+                    <p id="category-name">Grãos</p> 
+                </div>
+                <div id="Temperos" class="d-Temperos">
+                    <p id="category-name">Temperos</p> 
+                </div>
+                <div id="Artesanatos" class="d-Artesanatos">
+                    <p id="category-name">Artesanatos</p>
+                </div>
+                <div id="Derivados" class="d-Derivados">
+                    <p id="category-name">Derivados</p>
+                </div>
+            </div>
+            <div id="cart-page" class="cart-toggle">
+                </div>
+        </div>
+        <div id="cart">
+            <div class="taste-header">
+                <div class="user">
+               
+                </div>
+                <div class="util">
+                   
+                </div>
+            </div>
+            </div>
+            <div id="category-list">
+                <p class="item-menu">Lista de Produtos</p>
+                <div class="border"></div>                
+            </div>
+            <div id="checkout" class="cart-toggle">
+                <p id="total-item">Total Itens : 5</p>
+                <p id="total-price"></p>
+                <p id="delievery">Frete a partir R$19.99</p>
+                <button class="cart-btn">Confirmar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- mobile view -->
+    <div id="mobile-view" class="mobile-view">
+        <div class="mobile-top">
+            <div class="logo-box">
+                <img src="fruta/reduced_image.png" alt="" id="logo">
+                <i class="fa fa-map-marker your-address" id="m-add-address"> Your Address</i>
+            </div>
+            <div class="top-menu">
+                <i class="fa fa-search"></i>
+                <i class="fa fa-heart-o"></i>
+                <i class="fa fa-cart-plus" id="m-cart-plus"> </i>
+            </div>
+        </div>
+        
+        <div class="item-container">
+            <div class="category-header" id="category-header">
+            </div>
+
+            <div id="food-items" class="food-items">
+                <div id="Frutas" class="m-Frutas">
+                    <p id="category-name">Frutas</p>    
+                </div>
+                <div id="Verduras" class="m-Verduras">
+                    <p id="category-name">Verduras</p>    
+                </div>
+                <div id="Legumes" class="m-Legumes">
+                    <p id="category-name">Legumes</p>
+                </div>
+                <div id="Grãos" class="m-Grãos">
+                    <p id="category-name">Grãos</p> 
+                </div>
+                <div id="Temperos" class="m-Temperos">
+                    <p id="category-name">Temperos</p> 
+                </div>
+                <div id="Artesanatos" class="m-Artesanatos">
+                    <p id="category-name">Artesanatos</p>
+                </div>
+                <div id="Derivados" class="m-Derivados">
+                    <p id="category-name">Derivados</p>
+                </div>
+            </div>
+        </div>
+        <div class="mobile-footer">
+            <p>Configuração</p>
+            <p>Carrinho</p>
+            <a href="https://samuelburkner.github.io/oferta/"><p>Oferta</p></a>
+            <p>Ordens</p>
+        </div>
+        
+    </div>
+    <script src="/index.js" type="module"></script>
+</body>
+</html>
