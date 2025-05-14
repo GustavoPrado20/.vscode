@@ -57,7 +57,7 @@ function displayItems() {
 function createItemCard(item) {
     var itemCard = document.createElement('div');
     itemCard.setAttribute('id', 'item-card');
-
+ 
     var cardTop = document.createElement('div');
     cardTop.setAttribute('id', 'card-top');
 
