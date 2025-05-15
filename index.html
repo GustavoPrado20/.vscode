@@ -8,6 +8,51 @@
     <link rel="stylesheet" href="/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href=https://fonts.googleapis.com/css?family=Open+Sans:wght@300&display=swap>
+
+    <script>
+        function updateMenu() {
+            const loggedInUser = localStorage.getItem('loggedInUser');
+
+            const loginOptions = document.querySelectorAll('.login-option');
+            const logoutOptions = document.querySelectorAll('.logout-option');
+
+            if (loggedInUser) {
+                // Esconder opções de login
+                loginOptions.forEach(item => item.style.display = 'none');
+                // Mostrar opções de logout
+                logoutOptions.forEach(item => item.style.display = 'block');
+            } else {
+                // Mostrar opções de login
+                loginOptions.forEach(item => item.style.display = 'block');
+                // Esconder opções de logout
+                logoutOptions.forEach(item => item.style.display = 'none');
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const userType = localStorage.getItem('userType');
+
+            // Exemplo de menu protegido
+            const adminMenuItems = document.querySelectorAll('.admin-only');
+
+            if (userType !== 'admin') {
+                adminMenuItems.forEach(item => item.style.display = 'none');
+            }
+
+            
+            updateMenu();
+
+            // Logout
+            const logoutBtn = document.getElementById('logoutBtn');
+            if (logoutBtn) {
+                logoutBtn.addEventListener('click', () => {
+                    localStorage.removeItem('loggedInUser');
+                    localStorage.removeItem('userType');
+                    updateMenu();
+                });
+            }
+                });
+    </script>
 </head>
 <body>
 
@@ -23,10 +68,11 @@
                 <a href="https://samuelburkner.github.io/oferta/">Oferta</a>
                 <a href="https://samuelburkner.github.io/receitas/">Receitas Naturais</a>
                 <a href="https://samuelburkner.github.io/suporte12345/">Suporte</a>
-                <a href="https://samuelburkner.github.io/clientes1234/">Gestão de clientes</a>
-                <a href="https://samuelburkner.github.io/estoque/index.html">Gestão de estoque</a>
-                <a href="https://samuelburkner.github.io/entrega123/">Gerenciamento de entrega</a>
-                <a href="#">Conta</a>
+                <a href="https://samuelburkner.github.io/clientes1234/" class="admin-only">Gestão de clientes</a>
+                <a href="https://samuelburkner.github.io/estoque/index.html" class="admin-only">Gestão de estoque</a>
+                <a href="https://samuelburkner.github.io/entrega123/" class="admin-only">Gerenciamento de entrega</a>
+                <a href="loginUser.html" class="login-option">Login</a>
+                <a href="loginUser.html" class="logout-option" id="logoutBtn">Logout</a>
             </div>
         </div>
         <div id="food-container">

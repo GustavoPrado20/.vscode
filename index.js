@@ -75,6 +75,16 @@ function createItemCard(item) {
     
     img.addEventListener('click', function(e) {
         e.stopPropagation();
+        // Verificar se o usuário está logado
+        const loggedInUser = localStorage.getItem('loggedInUser');
+
+        if (!loggedInUser) {
+            alert('Você precisa estar logado para comprar algum Produto.');
+            window.location.href = 'loginUser.html'; // Redireciona para a página de login
+            return;
+        }
+
+        // Redirecionamento para o link PagSeguro
         const produtoLinks = linksPagamento[item.id];
         if (produtoLinks && produtoLinks.pagseguro) {
             window.location.href = produtoLinks.pagseguro;
@@ -82,6 +92,16 @@ function createItemCard(item) {
     });
     img.addEventListener('click', function(e) {
         e.stopPropagation();
+        // Verificar se o usuário está logado
+        const loggedInUser = localStorage.getItem('loggedInUser');
+
+        if (!loggedInUser) {
+            alert('Você precisa estar logado para comprar algum Produto.');
+            window.location.href = 'loginUser.html'; // Redireciona para a página de login
+            return;
+        }
+
+        // Redirecionamento para o link MercadoPago
         if (item.link_mercadopago) {
             window.location.href = item.link_mercadopago;
         } else {
