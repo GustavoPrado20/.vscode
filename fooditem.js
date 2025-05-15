@@ -9,7 +9,7 @@ const foodItem = [
         img: 'Saved Pictures/fruta/ameixaroxa.jpeg',
         quantity: 1,
         unit: 'KG',
-        link_mercadopago: 'http://127.0.0.1:5000/' 
+        link_mercadopago: 'http://127.0.0.1:5000/prePagamento1' 
     },
     {
         id: 1,

@@ -68,7 +68,7 @@ async function registerUser(username, email, password, user_type) {
         saveDatabase(db);
         localStorage.setItem('loggedInUser', email);
         alert('Usuário registrado com sucesso!');
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     } catch (err) {
         alert('Erro ao registrar: ' + err.message);
     }
@@ -85,7 +85,7 @@ async function loginUser(email, password) {
         localStorage.setItem('loggedInUser', user.email)
         localStorage.setItem('userType', user.user_type);;
         alert('Login bem-sucedido!');
-        window.location.href = 'index.html';
+        window.location.href = '../index.html';
     } else {
         alert('Usuário ou senha incorretos.');
     }

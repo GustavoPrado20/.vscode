@@ -80,7 +80,7 @@ function createItemCard(item) {
 
         if (!loggedInUser) {
             alert('Você precisa estar logado para comprar algum Produto.');
-            window.location.href = 'loginUser.html'; // Redireciona para a página de login
+            window.location.href = './views/loginUser.html'; // Redireciona para a página de login
             return;
         }
 
@@ -97,7 +97,7 @@ function createItemCard(item) {
 
         if (!loggedInUser) {
             alert('Você precisa estar logado para comprar algum Produto.');
-            window.location.href = 'loginUser.html'; // Redireciona para a página de login
+            window.location.href = './views/loginUser.html'; // Redireciona para a página de login
             return;
         }
 
