@@ -1,17 +1,39 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect
 from api.apiMercadoPago import gerar_link_pagamento
 
 app = Flask(__name__)
 
 @app.route("/")
 def homepage():
-    link_iniciar_pagamento = gerar_link_pagamento()
-    return render_template("prePagamento.html", link_pagamento=link_iniciar_pagamento)
+    return render_template("index.html")
 
 @app.route("/prePagamento1")
 def pre_pagamento1():
-    link_iniciar_pagamento = gerar_link_pagamento()
-    return render_template("prePagamento.html", link_pagamento=link_iniciar_pagamento)
+    return render_template("prePagamento.html")
+
+@app.route("/prePagamento2")
+def pre_pagamento2():
+    return render_template("prePagamento2.html")
+
+@app.route("/prePagamento3")
+def pre_pagamento3():
+    return render_template("prePagamento3.html")
+
+@app.route("/prePagamento4")
+def pre_pagamento4():
+    return render_template("prePagamento4.html")
+
+@app.route("/prePagamento5")
+def pre_pagamento5():
+    return render_template("prePagamento5.html")
+
+@app.route("/prePagamento6")
+def pre_pagamento6():
+    return render_template("prePagamento6.html")
+
+@app.route("/prePagamento7")
+def pre_pagamento7():
+    return render_template("prePagamento7.html")
 
 @app.route("/create_payment", methods=["POST"])
 def create_payment():
@@ -21,13 +43,11 @@ def create_payment():
     shipping = request.form.get("shipping")
 
     if not all([title, quantity, unit_price, shipping]):
-        return "<h1>Erro: Todos os campos são obrigatórios.</h1>"
+        return "Erro: Todos os campos são obrigatórios."
 
-    # Enviar os dados para o Mercado Pago
     link_pagamento = gerar_link_pagamento(title, quantity, unit_price, shipping)
 
-    # Redirecionar para o link de pagamento
-    return redirect(link_pagamento) if link_pagamento else "<h1>Erro ao gerar o link de pagamento.</h1>"
+    return redirect(link_pagamento) if link_pagamento else "Erro ao gerar o link de pagamento."
 
 @app.route("/compracerta")
 def compra_certa():
@@ -38,4 +58,4 @@ def compra_errada():
     return render_template("compraerrada.html")
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host='127.0.0.1', port=5500)

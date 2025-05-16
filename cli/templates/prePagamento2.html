@@ -193,15 +193,15 @@
         <a href="http://127.0.0.1:5502/index.html" class="back-btn">← Voltar para Loja</a>
         
         <div class="product-header">
-            <img src="https://www.bing.com/images/search?q=ameixa+roxa&id=CA4216FCC97DD8309F1E42B38DB9A12B32B00CEC&FORM=IQFRBA" alt="Produto" class="product-image" id="productImage">
+            <img src="https://receitanatureba.com/wp-content/uploads/2022/04/Como-tirar-o-amargo-do-almeirao.jpg" alt="Produto" class="product-image" id="productImage">
             <div>
-                <h1 class="product-title" id="productTitle">Ameixa Roxa</h1>
-                <p class="product-price" id="productPrice">R$ 15,99</p>
+                <h1 class="product-title" id="productTitle">Almeirão</h1>
+                <p class="product-price" id="productPrice">R$ 5,99</p>
             </div>
         </div>
         
         <div class="section">
-            <h2 class="section-title">Quantidade</h2>
+            <h2 class="section-title">Maço</h2>
             <div class="quantity-control">
                 <button class="quantity-btn" id="decreaseQty">-</button>
                 <input type="number" class="quantity-input" id="quantityInput" value="1" min="1">
@@ -259,9 +259,9 @@
         </div>
         
         <form id="paymentForm" method="POST" action="/create_payment">
-            <input type="hidden" name="title" value="Ameixa Roxa">
+            <input type="hidden" name="title" value="Almeirão">
             <input type="hidden" name="quantity" id="quantityInputForm" value="1">
-            <input type="hidden" name="unit_price" value="15.99">
+            <input type="hidden" name="unit_price" value="5.99">
             <input type="hidden" name="shipping" id="shippingInput" value="5.99">
             <button type="submit" class="checkout-btn">Finalizar Compra</button>
         </form>
@@ -269,7 +269,7 @@
     
     <script>
         // Preço unitário do produto
-        const unitPrice = 15.99;
+        const unitPrice = 5.99;
         let quantity = 1;
         let shippingPrice = 5.99;
         
@@ -357,8 +357,8 @@
         
         // Simular vindo de uma página de produto
         const urlParams = new URLSearchParams(window.location.search);
-        const productName = urlParams.get('product') || 'Ameixa Roxa';
-        const productImg = urlParams.get('image') || 'https://th.bing.com/th/id/R.c7ad0992fabf4b99196fae1de58dd7bc?rik=7AywMiuhuY2zQg&pid=ImgRaw&r=0';
+        const productName = urlParams.get('product') || 'Almeirão';
+        const productImg = urlParams.get('image') || 'https://receitanatureba.com/wp-content/uploads/2022/04/Como-tirar-o-amargo-do-almeirao.jpg';
         
         document.getElementById('productTitle').textContent = productName;
         document.getElementById('productImage').src = productImg;

@@ -9,7 +9,7 @@ const foodItem = [
         img: 'Saved Pictures/fruta/ameixaroxa.jpeg',
         quantity: 1,
         unit: 'KG',
-        link_mercadopago: 'http://127.0.0.1:5000/prePagamento1' 
+        link_mercadopago: 'http://127.0.0.1:5500/prePagamento1' 
     },
     {
         id: 1,
@@ -20,7 +20,7 @@ const foodItem = [
         img: 'fruta/aFrutas.png/Abacate.png',
         quantity: 1,
         unit: 'KG',
-        link_mercadopago: 'https://samuelburkner.github.io/sistemapagamento/' 
+        link_mercadopago: '' 
     },
     {
         id: 2,
@@ -31,7 +31,7 @@ const foodItem = [
         img: 'fruta/aFrutas.png/Abacaxi.png',
         quantity: 1,
         unit: 'KG',
-        link_mercadopago: 'https://samuelburkner.github.io/sistemapagamento/',
+        link_mercadopago: '',
     },
     {
         id: 63,
@@ -215,7 +215,8 @@ const foodItem = [
         price: 5.99,
         img: 'Saved Pictures/fruta/Almeirao.jpeg',
         quantity: 1,
-        unit: 'Maço'
+        unit: 'Maço',
+        link_mercadopago: 'http://127.0.0.1:5500/prePagamento2'
     },
     {
         id: 10,
@@ -417,7 +418,8 @@ const foodItem = [
         price: 5.99,
         img: 'fruta/cLegumes.png/Abóbora.png',
         quantity: 1,
-        unit: 'KG'
+        unit: 'KG',
+        link_mercadopago: 'http://127.0.0.1:5500/prePagamento3'
     },
     {
         id: 19,
@@ -619,7 +621,8 @@ const foodItem = [
         price: 3.99,
         img: 'fruta/AMARATO.jpeg',
         quantity: 1,
-        unit: 'KG'
+        unit: 'KG',
+        link_mercadopago: 'http://127.0.0.1:5500/prePagamento4'
     },
     {
         id: 25,
@@ -821,7 +824,8 @@ const foodItem = [
         price: 16.99,
         img: 'fruta/eTemperos-seco.png/Açafrão-seco.png',
         quantity: 1,
-        unit: 'KG'
+        unit: 'KG',
+        link_mercadopago: 'http://127.0.0.1:5500/prePagamento5'
     },
     {
         id: 33,
@@ -1023,7 +1027,8 @@ const foodItem = [
         price: 35.99,
         img: 'Saved Pictures/fruta/anigurami.jpg',
         quantity: 1,
-        unit: 'Unidade'
+        unit: 'Unidade',
+        link_mercadopago: 'http://127.0.0.1:5500/prePagamento6'
     },
     {
         id: 44,
@@ -1224,7 +1229,8 @@ const foodItem = [
         price: 9.99,
         img: 'Saved Pictures/fruta/bolo.jpeg',
         quantity: 1,
-        unit: 'KG'
+        unit: 'KG',
+        link_mercadopago: 'http://127.0.0.1:5500/prePagamento7'
     },
     {
         id: 118,
